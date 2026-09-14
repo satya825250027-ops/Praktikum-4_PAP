@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1b1b1b, #000000);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #ffffff;
+}
+
+.page {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 28px;
+  color: #bbbbbb;
+  font-size: 0.9rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+#btnBuat {
+  background: #f2994a;
+  color: #1b1b1b;
+}
+
+#btnBuat:hover {
+  background: #d9812f;
+  transform: translateY(-2px);
+}
+
+#btnHapus {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #f2994a;
+}
+
+#btnHapus:hover {
+  background: rgba(242, 153, 74, 0.15);
+  transform: translateY(-2px);
+}
+
+#idContainer {
+  min-height: 170px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Kartu ID berbentuk persegi panjang, bertema jersey basket */
+.id-card {
+  width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  color: #1b1b1b;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  animation: pop-in 0.25s ease;
+}
+
+.id-card-header {
+  background: repeating-linear-gradient(
+    135deg,
+    #f2994a,
+    #f2994a 10px,
+    #1b1b1b 10px,
+    #1b1b1b 20px
+  );
+  color: #ffffff;
+  padding: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.id-card-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.id-label {
+  margin: 12px 0 2px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #888888;
+  letter-spacing: 1px;
+}
+
+.id-label:first-child {
+  margin-top: 0;
+}
+
+.id-value {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
